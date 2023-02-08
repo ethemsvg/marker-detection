@@ -45,6 +45,8 @@ class image_converter:
 
     cv_image_gray = cv2.medianBlur(cv_image_gray, 5) 
 
+
+    
     height, width = cv_image.shape[:2]
 
     arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
@@ -64,8 +66,8 @@ class image_converter:
     if len(corners) > 0:
         for i in range(0, len(ids)):
 
-          rvec, tvec, markerPoints = cv2.aruco.estimatePoseSingleMarkers(corners[i], 0.2, matrix_coefficients,
-                                                        distortion_coefficients)
+          rvec, tvec= cv2.aruco.estimatePoseSingleMarkers(corners[i], 0.2, matrix_coefficients,
+                                                                       distortion_coefficients)
 
 
           cv2.aruco.drawDetectedMarkers(cv_image, corners) 
@@ -93,7 +95,7 @@ class image_converter:
             orientationW = quaternion[3] + orientationW
 
 
-          cv2.imshow("Image window", cv_image)
+   #       cv2.imshow("Image window", cv_image)
 
     if mode == "G":
       self.publishGatePose(corners, positionX,positionY,positionZ,orientationX,orientationY,orientationZ,orientationW)
@@ -174,7 +176,7 @@ class image_converter:
 				    cv2.FONT_HERSHEY_SIMPLEX,
 				    1, (0, 255, 0), 2) 
     
-    cv2.imshow("Image window", cv_image)
+ #   cv2.imshow("Image window", cv_image)
     cv2.waitKey(3)
     try:
       self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
