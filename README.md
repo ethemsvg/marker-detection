@@ -6,7 +6,14 @@ This ROS package was made for use in the [GTU Rover](https://www.youtube.com/wat
 
 # Screenshots
 ![Marker Detection](images/3.png)
+**Marker Detection - You can see the position of the middle point of the marker on the right side.**   
+<br /> <br />
 
-![Between Point Detection - Close](images/1.png)
+![Between Point Detection - Close](images/1.png)  
+**Between Point Detection - You can see the position of the middle point of the markers as a red circle.**   
+<br /> <br />
+
 
 ![Between Point Detection - Far](images/2.png)
+**Between Point Detection - You can see the position of the middle point of the markers as a red circle.**   
+<br /> <br />
