@@ -1,5 +1,7 @@
 # Description
-Zed stereo camera and OpenCV library are used to be able to detection of the ARUCO tags. For better recognition, Adaptive histogram equalization applied. Then blurred the images to remove other details for preprocessing on 1080p gray images.
+Zed stereo camera and OpenCV library are used to detect ARUCO Markers. For better recognition, Adaptive histogram equalization applied. <br/>
+For one marker, the position of the middle point of the ARUCO Marker is published as a ROS Topic.  
+For 2 markers, the position of the between point of the markers is published as a ROS Topic.
 
 ## GTU Rover
 This ROS package was made for use in the [GTU Rover](https://youtu.be/uv-LEvk_AX8?t=205) team's URC competition.  
