@@ -5,6 +5,8 @@ Zed stereo camera and OpenCV library are used to be able to detection of the ARU
 This ROS package was made for use in the [GTU Rover](https://www.youtube.com/watch?v=uv-LEvk_AX8) team's URC competition.  
 
 # Screenshots
-![First](images/1.png)
+![Marker Detection](images/3.png)
 
-![Second](images/2.png)
+![Between Point Detection - Close](images/1.png)
+
+![Between Point Detection - Far](images/2.png)
